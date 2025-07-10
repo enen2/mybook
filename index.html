@@ -1,93 +1,37 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailored Learning For Every Child</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Book</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+    }
+    ul {
+      margin-top: 0;
+    }
+  </style>
 </head>
-<body class="bg-gray-100">
-  <!-- Navigation Bar -->
-  <nav class="bg-blue-600 text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Tailored Learning</h1>
-      <div>
-        <a href="#" class="px-4 hover:text-gray-200">Home</a>
-        <a href="#" class="px-4 hover:text-gray-200">About</a>
-        <a href="#" class="px-4 hover:text-gray-200">Contact</a>
-      </div>
-    </div>
-  </nav>
+<body>
+  <h1>How to change</h1>
+  <p>In a society with few norms,<br>
+     thinking and behavior are encouraged,<br>
+     and deviation is accepted.</p>
 
-  <!-- Book Introduction -->
-  <div class="container mx-auto py-8">
-    <h2 class="text-3xl font-bold text-center mb-4">Tailored Learning For Every Child</h2>
-    <p class="text-xl text-gray-700 text-center max-w-3xl mx-auto">
-      This book is specially designed to help children strengthen their areas of weakness and overcome learning challenges. Through targeted strategies and thoughtfully designed exercises, it focuses on identifying and improving skills where children struggle the most — whether in reading, math, or other essential subjects.
-    </p>
-  </div>
+  <hr>
 
-  <!-- Product Showcase -->
-  <div class="container mx-auto py-8">
-    <h2 class="text-3xl font-bold text-center mb-8">Product Showcase</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-      <!-- Feature 1: Provide Practical, Easy-to-Use Strategies -->
-      <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
-        <h3 class="text-2xl font-bold text-center text-gray-800">Provide Practical, Easy-to-Use Strategies</h3>
-      </div>
-      <!-- Feature 2: Tailored for Different Learning Styles -->
-      <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
-        <h3 class="text-2xl font-bold text-center text-gray-800">Tailored for Different Learning Styles</h3>
-      </div>
-      <!-- Feature 3: Boost Motivation and Self-Esteem -->
-      <div class="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center">
-        <h3 class="text-2xl font-bold text-center text-gray-800">Boost Motivation and Self-Esteem</h3>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white p-4 text-center">
-    <p>© 2025 Tailored Learning. All rights reserved.</p>
-  </footer>
+  <h2>How to Enhance Your Personal Strengths?</h2>
+  <p>Here are some tips for you:</p>
+  <ul>
+    <li>Focus your energy on areas where you have talent and passion.</li>
+    <li>Master your craft through deliberate practice.</li>
+    <li>Seek high-challenge situations to grow and excel.</li>
+  </ul>
 </body>
 </html>
