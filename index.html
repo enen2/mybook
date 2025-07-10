@@ -3,120 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Book</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Personal Strength</title>
   <style>
     body {
       font-family: "Segoe UI", Roboto, sans-serif;
-      background-color: #f4f6f8;
       margin: 0;
       padding: 0;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .header {
-      background-color: #2980b9;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .header h1 {
-      margin-bottom: 10px;
-      font-size: 2.5em;
-    }
-    .content-box {
-      background-color: white;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin-top: 30px;
-    }
-    h2 {
+      background-color: #f4f6f8;
       color: #2c3e50;
     }
-    p {
+
+    .center-quote {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      text-align: center;
+      font-size: 1.6em;
+      font-weight: 600;
+      padding: 0 40px;
+      background-color: #fff9e6;
+      color: #d35400;
+      border-bottom: 3px solid #f39c12;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+      background-color: #ffffff;
+    }
+
+    .card {
+      background-color: #ecf0f1;
+      border-radius: 12px;
+      padding: 30px 25px;
+      width: 280px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       font-size: 1.1em;
-      line-height: 1.8;
+      transition: transform 0.3s ease;
     }
-    ul {
-      margin-top: 15px;
-      padding-left: 20px;
+
+    .card:hover {
+      transform: translateY(-5px);
     }
-    li {
-      margin-bottom: 10px;
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      color: #2980b9;
     }
-    canvas {
-      max-width: 100%;
-      margin-top: 20px;
+
+    @media screen and (max-width: 800px) {
+      .center-quote {
+        font-size: 1.2em;
+        height: auto;
+        padding: 60px 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>How to change</h1>
-    <p>In a society with few norms, thinking and behavior are encouraged, and deviation is accepted.</p>
-  </div>
-
-  <div class="section">
-    <div class="content-box">
-      <h2>How to Enhance Your Personal Strengths?</h2>
-      <p>Here are some tips for you:</p>
-      <ul>
-        <li><strong>Focus</strong> your energy on areas where you have talent and passion.</li>
-        <li><strong>Master</strong> your craft through deliberate practice.</li>
-        <li><strong>Seek</strong> high-challenge situations to grow and excel.</li>
-      </ul>
-    </div>
-
-    <div class="content-box">
-      <h2>Comparison: Tight vs. Loose Cultures</h2>
-      <canvas id="cultureChart"></canvas>
-    </div>
-  </div>
-
-  <script>
-    const ctx = document.getElementById('cultureChart').getContext('2d');
-    const cultureChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Norm Strictness', 'Tolerance of Deviance', 'Behavioral Constraint'],
-        datasets: [
-          {
-            label: 'Tight Culture',
-            data: [9, 2, 8],
-            backgroundColor: '#e74c3c'
-          },
-          {
-            label: 'Loose Culture',
-            data: [3, 9, 2],
-            backgroundColor: '#2ecc71'
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'bottom'
-          },
-          title: {
-            display: true,
-            text: 'Cultural Dimensions'
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 10
-          }
-        }
-      }
-    });
-  </script>
-
-</body>
-</html>
+  <div class="center-quote">
+    In our society, where
