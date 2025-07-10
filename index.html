@@ -32,7 +32,7 @@
       line-height: 1.8;
       border-bottom: 3px solid #f39c12;
       max-width: 900px;
-      margin: 0 auto 60px auto;
+      margin: 0 auto 30px auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
@@ -55,13 +55,24 @@
     }
 
     .card {
-      background-color: #ecf0f1;
       border-radius: 12px;
-      padding: 30px 25px;
+      padding: 25px 20px;
       width: 280px;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      font-size: 1.1em;
+      font-size: 1.15em;
+      font-weight: 500;
       text-align: left;
+      color: #2c3e50;
+    }
+
+    .card:nth-child(1) {
+      background-color: #d6eaff; /* 蓝色调 */
+    }
+    .card:nth-child(2) {
+      background-color: #ffe5cc; /* 橙色调 */
+    }
+    .card:nth-child(3) {
+      background-color: #d9f9d9; /* 绿色调 */
     }
 
     .footer {
@@ -69,7 +80,7 @@
       font-size: 1.4em;
       font-weight: bold;
       color: #27ae60;
-      margin: 50px 0;
+      margin: 40px 0 60px 0;
     }
 
     @media screen and (max-width: 800px) {
