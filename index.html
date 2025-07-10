@@ -6,32 +6,86 @@
   <title>My Book</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-    }
-    h1 {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f8fa;
       color: #333;
     }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      color: #34495e;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
     ul {
-      margin-top: 0;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #2980b9;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>How to change</h1>
-  <p>In a society with few norms,<br>
-     thinking and behavior are encouraged,<br>
-     and deviation is accepted.</p>
+  <div class="container">
+    <h1>How to change</h1>
+    <p>
+      In a society with <span class="highlight">few norms</span>,<br>
+      thinking and behavior are <span class="highlight">encouraged</span>,<br>
+      and deviation is <span class="highlight">accepted</span>.
+    </p>
 
-  <hr>
-
-  <h2>How to Enhance Your Personal Strengths?</h2>
-  <p>Here are some tips for you:</p>
-  <ul>
-    <li>Focus your energy on areas where you have talent and passion.</li>
-    <li>Master your craft through deliberate practice.</li>
-    <li>Seek high-challenge situations to grow and excel.</li>
-  </ul>
+    <h2>How to Enhance Your Personal Strengths?</h2>
+    <p>Here are some tips for you:</p>
+    <ul>
+      <li>Focus your energy on areas where you have <strong>talent</strong> and <strong>passion</strong>.</li>
+      <li>Master your craft through <strong>deliberate practice</strong>.</li>
+      <li>Seek <strong>high-challenge situations</strong> to grow and excel.</li>
+    </ul>
+  </div>
 </body>
 </html>
