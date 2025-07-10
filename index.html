@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Strength</title>
+  <title>How to change</title>
   <style>
     body {
       font-family: "Segoe UI", Roboto, sans-serif;
@@ -13,22 +13,43 @@
       color: #2c3e50;
     }
 
+    .main-title {
+      text-align: center;
+      font-size: 2.8em;
+      font-weight: bold;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
     .highlight-box {
       background-color: #fff9e6;
       color: #d35400;
-      padding: 60px 30px;
+      padding: 40px 30px;
       text-align: center;
-      font-size: 1.6em;
+      font-size: 1.4em;
       font-weight: 600;
-      line-height: 1.6;
+      line-height: 1.8;
       border-bottom: 3px solid #f39c12;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #34495e;
     }
 
     .cards-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 0 20px 40px 20px;
       gap: 30px;
       background-color: #ffffff;
     }
@@ -40,50 +61,65 @@
       width: 280px;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       font-size: 1.1em;
-      transition: transform 0.3s ease;
+      text-align: left;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card-title {
+    .footer {
+      text-align: center;
+      font-size: 1.4em;
       font-weight: bold;
-      font-size: 1.3em;
-      margin-bottom: 15px;
-      color: #2980b9;
+      color: #27ae60;
+      margin: 50px 0;
     }
 
     @media screen and (max-width: 800px) {
+      .main-title {
+        font-size: 2em;
+        margin-top: 30px;
+      }
+
       .highlight-box {
-        font-size: 1.3em;
-        padding: 50px 20px;
+        font-size: 1.2em;
+        padding: 30px 20px;
+      }
+
+      .section-title {
+        font-size: 1.5em;
+      }
+
+      .footer {
+        font-size: 1.2em;
       }
     }
   </style>
 </head>
 <body>
 
+  <div class="main-title">How to change</div>
+
   <div class="highlight-box">
-    In our society, where there are many social norms and strong expectations for members to uphold these practices,<br>
-    people are expected to follow established traditions and behave in ways that align with societal expectations.<br>
+    In our society, where there are many social norms<br>
+    and strong expectations for members to uphold these practices,<br>
+    people are expected to follow established traditions<br>
+    and behave in ways that align with societal expectations.<br>
     Deviating from these expectations is often discouraged.
   </div>
 
+  <div class="section-title">How to Enhance Your Personal Strengths</div>
+
   <div class="cards-container">
     <div class="card">
-      <div class="card-title">Focus</div>
       Focus your energy on areas where you have talent and passion.
     </div>
     <div class="card">
-      <div class="card-title">Master</div>
       Master your craft through deliberate practice.
     </div>
     <div class="card">
-      <div class="card-title">Seek</div>
       Seek high-challenge situations to grow and excel.
     </div>
   </div>
+
+  <div class="footer">Take action now!</div>
 
 </body>
 </html>
